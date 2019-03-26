@@ -30,7 +30,9 @@ namespace projectB
 
         private void assesmentMain_Load(object sender, EventArgs e)
         {
-
+            assessmentmainpage n = new assessmentmainpage();
+            this.Hide();
+            n.Show() ;
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -60,6 +62,21 @@ namespace projectB
         private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+        }
+
+        private void linkLabel4_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            assessmentmainpage n = new assessmentmainpage();
+
+            this.Hide();
+            n.Show();
+        }
+
+        private void linkLabel5_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Attendence n = new Attendence();
+            this.Hide();
+            n.Show();
         }
     }
 }

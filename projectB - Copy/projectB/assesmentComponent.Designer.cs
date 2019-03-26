@@ -39,30 +39,32 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(74, 114);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(27, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(29, 13);
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "new";
+            this.linkLabel1.Text = "New";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(74, 150);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(40, 13);
+            this.linkLabel2.Size = new System.Drawing.Size(42, 13);
             this.linkLabel2.TabIndex = 1;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "update";
+            this.linkLabel2.Text = "Update";
             // 
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.Location = new System.Drawing.Point(74, 188);
             this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(36, 13);
+            this.linkLabel3.Size = new System.Drawing.Size(38, 13);
             this.linkLabel3.TabIndex = 2;
             this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "delete";
+            this.linkLabel3.Text = "Delete";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // label1
             // 

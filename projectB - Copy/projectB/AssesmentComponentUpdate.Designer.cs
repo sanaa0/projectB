@@ -28,14 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.rubricBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectBDataSet = new projectB.ProjectBDataSet();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.assessmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rubricTableAdapter = new projectB.ProjectBDataSetTableAdapters.RubricTableAdapter();
+            this.assessmentTableAdapter = new projectB.ProjectBDataSetTableAdapters.AssessmentTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.rubricBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assessmentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,27 +99,80 @@
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 5;
             // 
-            // textBox3
+            // button1
             // 
-            this.textBox3.Location = new System.Drawing.Point(190, 143);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
+            this.button1.Location = new System.Drawing.Point(479, 239);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Update";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox4
+            // comboBox1
             // 
-            this.textBox4.Location = new System.Drawing.Point(190, 175);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.comboBox1.DataSource = this.rubricBindingSource;
+            this.comboBox1.DisplayMember = "Id";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(190, 140);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 9;
+            this.comboBox1.ValueMember = "Id";
+            // 
+            // rubricBindingSource
+            // 
+            this.rubricBindingSource.DataMember = "Rubric";
+            this.rubricBindingSource.DataSource = this.projectBDataSet;
+            // 
+            // projectBDataSet
+            // 
+            this.projectBDataSet.DataSetName = "ProjectBDataSet";
+            this.projectBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataSource = this.assessmentBindingSource;
+            this.comboBox2.DisplayMember = "Id";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(190, 172);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 10;
+            this.comboBox2.ValueMember = "Id";
+            // 
+            // assessmentBindingSource
+            // 
+            this.assessmentBindingSource.DataMember = "Assessment";
+            this.assessmentBindingSource.DataSource = this.projectBDataSet;
+            // 
+            // rubricTableAdapter
+            // 
+            this.rubricTableAdapter.ClearBeforeFill = true;
+            // 
+            // assessmentTableAdapter
+            // 
+            this.assessmentTableAdapter.ClearBeforeFill = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(479, 294);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Back";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // AssesmentComponentUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
@@ -118,6 +182,9 @@
             this.Name = "AssesmentComponentUpdate";
             this.Text = "AssesmentComponentUpdate";
             this.Load += new System.EventHandler(this.AssesmentComponentUpdate_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.rubricBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assessmentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,7 +198,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private ProjectBDataSet projectBDataSet;
+        private System.Windows.Forms.BindingSource rubricBindingSource;
+        private ProjectBDataSetTableAdapters.RubricTableAdapter rubricTableAdapter;
+        private System.Windows.Forms.BindingSource assessmentBindingSource;
+        private ProjectBDataSetTableAdapters.AssessmentTableAdapter assessmentTableAdapter;
+        private System.Windows.Forms.Button button2;
     }
 }

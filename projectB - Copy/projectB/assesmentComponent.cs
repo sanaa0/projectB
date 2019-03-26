@@ -16,5 +16,18 @@ namespace projectB
         {
             InitializeComponent();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            assesmentComponent n = new assesmentComponent();
+            this.Hide();
+            n.Show();
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("lal");
+
+        }
     }
 }

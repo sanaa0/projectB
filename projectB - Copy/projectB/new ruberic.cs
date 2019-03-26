@@ -94,6 +94,13 @@ namespace projectB
                 con.Open();
 
                 //            string query = "INSERT INTO Rubric(CloId,Details) VALUES(g,'" + textBox1.Text.ToString() + "')";
+                SqlCommand c1ommand = new SqlCommand(" Delete  FROM RubricLevel WHERE RubricId='" + rid + "'", con);
+
+                c1ommand.ExecuteNonQuery();
+
+                SqlCommand c2ommand = new SqlCommand(" Delete  FROM AssessmentComponent WHERE RubricId='" + rid + "'", con);
+
+                c2ommand.ExecuteNonQuery();
 
                 SqlCommand command = new SqlCommand(" Delete  FROM Rubric WHERE Id='"+rid+"'", con);
 
@@ -105,8 +112,23 @@ namespace projectB
             n.Show();
 
             }
+            else if (cn == 4)
+            {
+                string rid = selectedRow.Cells[0].Value.ToString();
+                int rrid = Convert.ToInt32(rid);
+                NewRubricLevel n = new NewRubricLevel(rrid);
+                this.Hide();
+                n.Show();
+            }
 
-
+            else if (cn == 5)
+            {
+                string rid = selectedRow.Cells[0].Value.ToString();
+                int rrid = Convert.ToInt32(rid);
+                viewRubricLevels n = new viewRubricLevels(rrid);
+                this.Hide();
+                n.Show();
+            }
 
 
 

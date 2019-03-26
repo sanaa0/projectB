@@ -50,7 +50,7 @@ namespace projectB
             string selected = dataGridView1.CurrentCell.ColumnIndex.ToString();
             int cn = Convert.ToInt32(selected);
 
-            if (cn == 6)
+            if (cn == 6) //update
             {
                  cloid = selectedRow.Cells[0].Value.ToString();
                 new_ruberic r = new new_ruberic(Convert.ToInt32(cloid));
@@ -59,7 +59,7 @@ namespace projectB
 
             }
             
-            else if (cn == 4)
+            else if (cn == 4) //add rubric
             {
 
                  string rid = selectedRow.Cells[0].Value.ToString();
@@ -77,7 +77,7 @@ namespace projectB
 
             }
 
-            else if (cn == 5)
+            else if (cn == 5) //delete
             {
                
                 string cid = selectedRow.Cells[0].Value.ToString();
@@ -87,10 +87,39 @@ namespace projectB
                 con.Open();
 
                 //            string query = "INSERT INTO Rubric(CloId,Details) VALUES(g,'" + textBox1.Text.ToString() + "')";
+                
+                SqlCommand c1 = new SqlCommand("select Id from Rubric where Cloid='" + cid + "'", con);
+                var d = c1.ExecuteReader();
 
+                List<int> list = new List<int>();
+
+                while (d.Read())
+                {
+                    list.Add(d.GetInt32(0));
+                //    count++;
+                   
+                }
+                d.Close();
+                for (int i = 0; i < list.Count; i++)
+                {
+                    SqlCommand c2ommand = new SqlCommand(" Delete  FROM RubricLevel WHERE RubricId=" + list[i], con);
+                    c2ommand.ExecuteNonQuery();
+                }
+                
                 SqlCommand command = new SqlCommand(" Delete  FROM Clo WHERE Id='" + cid + "'", con);
+               
+                
+                //for(int j = 0; j < count; j++)
+                //{
+               
+                //}
+
+               
                 SqlCommand c1ommand = new SqlCommand(" Delete  FROM Rubric WHERE CloId='" + cid + "'", con);
-                c1ommand.ExecuteNonQuery();
+                    c1ommand.ExecuteNonQuery();
+                
+
+
 
                 command.ExecuteNonQuery();
                 
