@@ -74,7 +74,14 @@ namespace projectB
 
         private void linkLabel5_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Attendence n = new Attendence();
+            MarkAttendance n = new MarkAttendance();
+            this.Hide();
+            n.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            view_students n = new view_students();
             this.Hide();
             n.Show();
         }

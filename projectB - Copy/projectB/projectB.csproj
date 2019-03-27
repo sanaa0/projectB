@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -88,11 +91,11 @@
     <Compile Include="assessmentmainpage.Designer.cs">
       <DependentUpon>assessmentmainpage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Attendence.cs">
+    <Compile Include="AttendanceMark.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Attendence.Designer.cs">
-      <DependentUpon>Attendence.cs</DependentUpon>
+    <Compile Include="AttendanceMark.Designer.cs">
+      <DependentUpon>AttendanceMark.cs</DependentUpon>
     </Compile>
     <Compile Include="cloMain.cs">
       <SubType>Form</SubType>
@@ -123,6 +126,12 @@
     </Compile>
     <Compile Include="Delete_Student.Designer.cs">
       <DependentUpon>Delete_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarkAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarkAttendance.Designer.cs">
+      <DependentUpon>MarkAttendance.cs</DependentUpon>
     </Compile>
     <Compile Include="new ruberic.cs">
       <SubType>Form</SubType>
@@ -236,8 +245,8 @@
     <EmbeddedResource Include="assessmentmainpage.resx">
       <DependentUpon>assessmentmainpage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Attendence.resx">
-      <DependentUpon>Attendence.cs</DependentUpon>
+    <EmbeddedResource Include="AttendanceMark.resx">
+      <DependentUpon>AttendanceMark.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cloMain.resx">
       <DependentUpon>cloMain.cs</DependentUpon>
@@ -253,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Delete_Student.resx">
       <DependentUpon>Delete_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarkAttendance.resx">
+      <DependentUpon>MarkAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="new ruberic.resx">
       <DependentUpon>new ruberic.cs</DependentUpon>
@@ -306,6 +318,7 @@
     <EmbeddedResource Include="view_students.resx">
       <DependentUpon>view_students.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="ProjectBDataSet.xsc">
       <DependentUpon>ProjectBDataSet.xsd</DependentUpon>
     </None>

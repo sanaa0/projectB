@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -104,6 +105,17 @@
             this.linkLabel5.Text = "Attendance Management";
             this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked_1);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label2.Location = new System.Drawing.Point(90, 323);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 18);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Result Management";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // assesmentMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -111,6 +123,7 @@
             this.BackgroundImage = global::projectB.Properties.Resources.download__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1162, 562);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.linkLabel5);
             this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.label1);
@@ -135,6 +148,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel4;
         private System.Windows.Forms.LinkLabel linkLabel5;
+        private System.Windows.Forms.Label label2;
     }
 }
 
