@@ -69,5 +69,12 @@ namespace projectB
         {
 
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ViewAttendance n = new ViewAttendance();
+            this.Hide();
+            n.Show();
+        }
     }
 }
