@@ -32,6 +32,11 @@ namespace projectB
             VD.Fill(table);
             dataGridView1.DataSource = table; //showing required data in dataGrid
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     }
 

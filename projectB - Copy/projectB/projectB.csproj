@@ -91,6 +91,18 @@
     <Compile Include="assessmentmainpage.Designer.cs">
       <DependentUpon>assessmentmainpage.cs</DependentUpon>
     </Compile>
+    <Compile Include="assessmentViseResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="assessmentViseResult.Designer.cs">
+      <DependentUpon>assessmentViseResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssessmentViseResult1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssessmentViseResult1.Designer.cs">
+      <DependentUpon>AssessmentViseResult1.cs</DependentUpon>
+    </Compile>
     <Compile Include="AttendanceMark.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +182,18 @@
       <DependentUpon>ProjectBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ra1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ra1.Designer.cs">
+      <DependentUpon>ra1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="resultassesmentStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="resultassesmentStudent.Designer.cs">
+      <DependentUpon>resultassesmentStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="ResultMarking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +287,12 @@
     <EmbeddedResource Include="assessmentmainpage.resx">
       <DependentUpon>assessmentmainpage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="assessmentViseResult.resx">
+      <DependentUpon>assessmentViseResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssessmentViseResult1.resx">
+      <DependentUpon>AssessmentViseResult1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AttendanceMark.resx">
       <DependentUpon>AttendanceMark.cs</DependentUpon>
     </EmbeddedResource>
@@ -309,6 +339,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ra1.resx">
+      <DependentUpon>ra1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resultassesmentStudent.resx">
+      <DependentUpon>resultassesmentStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ResultMarking.resx">
       <DependentUpon>ResultMarking.cs</DependentUpon>
     </EmbeddedResource>

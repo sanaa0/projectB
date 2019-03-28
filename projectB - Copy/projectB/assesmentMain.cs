@@ -81,7 +81,7 @@ namespace projectB
 
         private void label2_Click(object sender, EventArgs e)
         {
-           StudentMarkSheet  n = new StudentMarkSheet();
+            ra1 n = new ra1();
             this.Hide();
             n.Show();
         }
