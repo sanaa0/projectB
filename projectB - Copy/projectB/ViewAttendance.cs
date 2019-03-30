@@ -24,7 +24,7 @@ namespace projectB
             SqlConnection con = new SqlConnection(connection_string);
             con.Open();
 
-            String query = "SELECT FirstName,LastName,RegistrationNumber,AttendanceStatus FROM [Student] JOIN StudentAttendance ON StudentAttendance.StudentId = [Student].Id ";
+            String query = "SELECT FirstName,LastName,RegistrationNumber,Name as Attendance FROM [Student] JOIN StudentAttendance ON StudentAttendance.StudentId = [Student].Id  JOIN Lookup on Lookup.LookupId = StudentAttendance.AttendanceStatus";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataAdapter VD = new SqlDataAdapter(cmd);
             DataTable table = new DataTable(cmd.ToString());

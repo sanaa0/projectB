@@ -28,13 +28,7 @@ namespace projectB
            
         }
 
-        private void assesmentMain_Load(object sender, EventArgs e)
-        {
-            assessmentmainpage n = new assessmentmainpage();
-            this.Hide();
-            n.Show() ;
-        }
-
+     
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             cloMain au = new cloMain();
