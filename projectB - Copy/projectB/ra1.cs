@@ -27,10 +27,17 @@ namespace projectB
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            assessmentViseResult n = new assessmentViseResult();
+            AssessmentViseResult1 n = new AssessmentViseResult1();
             this.Hide();
             n.Show();
 
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CWR n = new CWR();
+            this.Hide();
+            n.Show();
         }
     }
 }

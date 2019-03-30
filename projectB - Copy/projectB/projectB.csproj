@@ -115,6 +115,12 @@
     <Compile Include="cloMain.Designer.cs">
       <DependentUpon>cloMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="CWR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CWR.Designer.cs">
+      <DependentUpon>CWR.cs</DependentUpon>
+    </Compile>
     <Compile Include="deleteAssesment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cloMain.resx">
       <DependentUpon>cloMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CWR.resx">
+      <DependentUpon>CWR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="deleteAssesment.resx">
       <DependentUpon>deleteAssesment.cs</DependentUpon>

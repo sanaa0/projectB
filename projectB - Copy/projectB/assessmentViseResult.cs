@@ -37,7 +37,7 @@ namespace projectB
             if (cn == 2)
             {
 
-                AssessmentViseResult1 n = new AssessmentViseResult1(p);
+                AssessmentViseResult1 n = new AssessmentViseResult1();
                 this.Hide();
                 n.Show();
             }

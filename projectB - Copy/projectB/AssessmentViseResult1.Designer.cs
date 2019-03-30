@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.projectBDataSet = new projectB.ProjectBDataSet();
@@ -49,15 +48,6 @@
             this.label1.Size = new System.Drawing.Size(108, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Result of Assessment";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(195, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
             // 
             // dataGridView1
             // 
@@ -100,7 +90,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AssessmentViseResult1";
             this.Load += new System.EventHandler(this.AssessmentViseResult1_Load);
@@ -115,7 +104,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private ProjectBDataSet projectBDataSet;
         private System.Windows.Forms.BindingSource studentBindingSource;

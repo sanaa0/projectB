@@ -21,12 +21,12 @@ namespace projectB
 {
     public partial class AssessmentViseResult1 : Form
     {
-        public int assessment;
+       
         List<int> maxlevels;
-        public AssessmentViseResult1(int assess)
+        public AssessmentViseResult1()
         {
             InitializeComponent();
-            assessment = assess;
+           
         }
 
         public void exportFunc(DataGridView dgw,string filename)
@@ -83,7 +83,7 @@ namespace projectB
             int numComp = 0;
             // TODO: This line of code loads data into the 'projectBDataSet.Student' table. You can move, or remove it, as needed.
             this.studentTableAdapter.Fill(this.projectBDataSet.Student);
-            label2.Text = assessment.ToString();
+            
 
             string connection_string = "Data Source=DESKTOP-FA5LU48;Initial Catalog=ProjectB;Integrated Security=True";
             SqlConnection con = new SqlConnection(connection_string);
