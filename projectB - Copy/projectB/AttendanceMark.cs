@@ -38,6 +38,9 @@ namespace projectB
             DataSet ds = new DataSet();
 
             da.Fill(ds, "ss");
+            /// <summary>
+            /// combo box for attendance
+            /// </summary>
 
             dataGridView1.DataSource = ds.Tables["ss"];
             DataGridViewComboBoxColumn col1 = new DataGridViewComboBoxColumn();

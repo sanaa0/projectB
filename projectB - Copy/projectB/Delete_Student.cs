@@ -23,5 +23,10 @@ namespace projectB
             this.Hide();
             n.Show();
         }
+
+        private void Delete_Student_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

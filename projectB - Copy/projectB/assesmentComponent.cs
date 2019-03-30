@@ -36,5 +36,10 @@ namespace projectB
             this.Hide();
             n.Show();
         }
+
+        private void assesmentComponent_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -51,7 +51,7 @@ namespace projectB
             d.Read();
 
 
-            textBox1.Text = d[1].ToString(); textBox2.Text = d[3].ToString();
+            textBox1.Text = d[1].ToString(); textBox2.Text = d[3].ToString(); // already shows the data stored previously
             textBox3.Text = d[4].ToString();
 
 

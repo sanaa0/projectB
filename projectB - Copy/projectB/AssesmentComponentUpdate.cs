@@ -40,7 +40,7 @@ namespace projectB
 
 
             textBox1.Text = d[1].ToString(); textBox2.Text = d[3].ToString();
-            comboBox2.Text = d[6].ToString();
+            comboBox2.Text = d[6].ToString();   // already shows the data stored previously
             comboBox1.Text = d[2].ToString();
 
         }

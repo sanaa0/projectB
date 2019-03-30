@@ -70,7 +70,9 @@ namespace projectB
             int cn = Convert.ToInt32(selected);
             if (cn == 2)
             {
-
+                /// <summary>
+                /// update 
+                /// </summary>
                 string rid = selectedRow.Cells[0].Value.ToString();
                 int id = Convert.ToInt32(rid);
                 UpdateRubric ur = new UpdateRubric(id, g);
@@ -87,6 +89,9 @@ namespace projectB
             }
             else if (cn==3)
             {
+                /// <summary>
+                /// delets in hierarchy
+                /// </summary>
                 string rid = selectedRow.Cells[0].Value.ToString();
 
                 string connection_string = "Data Source=DESKTOP-FA5LU48;Initial Catalog=ProjectB;Integrated Security=True";

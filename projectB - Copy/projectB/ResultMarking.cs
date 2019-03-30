@@ -13,6 +13,9 @@ namespace projectB
 {
     public partial class ResultMarking : Form
     {
+        /// <summary>
+        /// specified buttons to load options according to prorly chosen options
+        /// </summary>
         public int rid;
         public ResultMarking(int id)
         {

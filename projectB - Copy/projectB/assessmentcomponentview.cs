@@ -10,9 +10,12 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 
 namespace projectB
+    
 {
     public partial class assessmentcomponentview : Form
-    {
+    { /// <summary>
+    /// 
+    /// </summary>
         int aid;
         int cloid;
         public assessmentcomponentview()
@@ -36,17 +39,19 @@ namespace projectB
 
             cmd.CommandType = CommandType.Text;
 
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            SqlDataAdapter da = new SqlDataAdapter(cmd); 
+     
 
             DataSet ds = new DataSet();
 
             da.Fill(ds, "ss");
 
-            dataGridView1.DataSource = ds.Tables["ss"];
+            dataGridView1.DataSource = ds.Tables["ss"]; //datasource to gridview
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) 
+
         {
 
             DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
@@ -54,7 +59,8 @@ namespace projectB
             string selected = dataGridView1.CurrentCell.ColumnIndex.ToString();
             int cn = Convert.ToInt32(selected);
 
-            if (cn == 7)
+            if (cn == 7) // if the update is clicked.
+                
             {
                 string ccloid = selectedRow.Cells[0].Value.ToString();
                 aid = Convert.ToInt16(ccloid);
@@ -67,7 +73,9 @@ namespace projectB
 
             else if (cn == 8)
             {
-
+                /// <summary>
+                /// adds new assessment component
+                /// </summary>
 
                 string cid = selectedRow.Cells[0].Value.ToString();
 

@@ -37,7 +37,10 @@ namespace projectB
             textBox1.Text = d[1].ToString();textBox2.Text = d[2].ToString();
             textBox3.Text = d[3].ToString(); textBox4.Text = d[4].ToString();
             textBox5.Text = d[5].ToString();
-           
+            /// <summary>
+            /// Previous data
+            /// </summary>
+
 
         }
 

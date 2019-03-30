@@ -99,6 +99,7 @@
             this.Controls.Add(this.linkLabel1);
             this.Name = "assesmentComponent";
             this.Text = "assesmentComponent";
+            this.Load += new System.EventHandler(this.assesmentComponent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

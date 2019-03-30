@@ -21,6 +21,9 @@ namespace projectB
 
         private void ViewClo_Load(object sender, EventArgs e)
         {
+            /// <summary>
+            /// buttons selected on base of content click
+            /// </summary>
             // TODO: This line of code loads data into the 'projectBDataSet.Clo' table. You can move, or remove it, as needed.
             this.cloTableAdapter.Fill(this.projectBDataSet.Clo);
             string connection_string = "Data Source=DESKTOP-FA5LU48;Initial Catalog=ProjectB;Integrated Security=True";

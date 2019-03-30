@@ -23,5 +23,6 @@ namespace projectB
             this.Hide();
             n.Show();
         }
+
     }
 }

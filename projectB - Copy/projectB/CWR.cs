@@ -52,6 +52,9 @@ namespace projectB
 
         public void exportFunc(DataGridView dgw, string filename)
         {
+            /// <summary>
+            ///  pdf function
+            /// </summary>
             BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
             PdfPTable pdftable = new PdfPTable(dgw.ColumnCount);
             pdftable.DefaultCell.Padding = 3;

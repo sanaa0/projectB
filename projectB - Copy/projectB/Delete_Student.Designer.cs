@@ -71,6 +71,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Delete_Student";
             this.Text = "Delete_Student";
+            this.Load += new System.EventHandler(this.Delete_Student_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
