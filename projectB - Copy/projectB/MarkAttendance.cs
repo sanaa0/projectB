@@ -83,5 +83,12 @@ namespace projectB
             this.Hide();
             n.Show();
         }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AttendanceUpdate n = new AttendanceUpdate();
+            this.Hide();
+            n.Show();
+        }
     }
 }

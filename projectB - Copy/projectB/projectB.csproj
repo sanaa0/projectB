@@ -109,6 +109,12 @@
     <Compile Include="AttendanceMark.Designer.cs">
       <DependentUpon>AttendanceMark.cs</DependentUpon>
     </Compile>
+    <Compile Include="AttendanceUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceUpdate.Designer.cs">
+      <DependentUpon>AttendanceUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="cloMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AttendanceMark.resx">
       <DependentUpon>AttendanceMark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceUpdate.resx">
+      <DependentUpon>AttendanceUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cloMain.resx">
       <DependentUpon>cloMain.cs</DependentUpon>
