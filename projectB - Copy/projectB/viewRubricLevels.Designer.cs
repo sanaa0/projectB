@@ -30,18 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.projectBDataSet = new projectB.ProjectBDataSet();
-            this.rubricLevelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rubricLevelTableAdapter = new projectB.ProjectBDataSetTableAdapters.RubricLevelTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rubricIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detailsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.measurementLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.rubricLevelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectBDataSet = new projectB.ProjectBDataSet();
+            this.rubricLevelTableAdapter = new projectB.ProjectBDataSetTableAdapters.RubricLevelTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubricLevelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -56,25 +57,11 @@
             this.Update,
             this.Delete});
             this.dataGridView1.DataSource = this.rubricLevelBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(90, 88);
+            this.dataGridView1.Location = new System.Drawing.Point(47, 79);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(641, 293);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // projectBDataSet
-            // 
-            this.projectBDataSet.DataSetName = "ProjectBDataSet";
-            this.projectBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // rubricLevelBindingSource
-            // 
-            this.rubricLevelBindingSource.DataMember = "RubricLevel";
-            this.rubricLevelBindingSource.DataSource = this.projectBDataSet;
-            // 
-            // rubricLevelTableAdapter
-            // 
-            this.rubricLevelTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -119,18 +106,43 @@
             this.Delete.Text = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
+            // rubricLevelBindingSource
+            // 
+            this.rubricLevelBindingSource.DataMember = "RubricLevel";
+            this.rubricLevelBindingSource.DataSource = this.projectBDataSet;
+            // 
+            // projectBDataSet
+            // 
+            this.projectBDataSet.DataSetName = "ProjectBDataSet";
+            this.projectBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rubricLevelTableAdapter
+            // 
+            this.rubricLevelTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(628, 404);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Main";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // viewRubricLevels
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "viewRubricLevels";
             this.Text = "viewRubricLevels";
             this.Load += new System.EventHandler(this.viewRubricLevels_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubricLevelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -147,5 +159,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn measurementLevelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Update;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.Button button1;
     }
 }

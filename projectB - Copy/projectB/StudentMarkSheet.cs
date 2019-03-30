@@ -34,5 +34,12 @@ namespace projectB
             n.Show();
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            assesmentMain n = new assesmentMain();
+            this.Hide();
+            n.Show();
+        }
     }
 }

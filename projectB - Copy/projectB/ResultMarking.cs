@@ -139,5 +139,12 @@ namespace projectB
 
             MessageBox.Show("Marks Added Succesfully");
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            assesmentMain n = new assesmentMain();
+            this.Hide();
+            n.Show();
+        }
     }
 }

@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.projectBDataSet = new projectB.ProjectBDataSet();
-            this.label1 = new System.Windows.Forms.Label();
-            this.studentTableAdapter = new projectB.ProjectBDataSetTableAdapters.StudentTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +39,10 @@
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectBDataSet = new projectB.ProjectBDataSet();
+            this.label1 = new System.Windows.Forms.Label();
+            this.studentTableAdapter = new projectB.ProjectBDataSetTableAdapters.StudentTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -70,29 +70,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(923, 301);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataMember = "Student";
-            this.studentBindingSource.DataSource = this.projectBDataSet;
-            // 
-            // projectBDataSet
-            // 
-            this.projectBDataSet.DataSetName = "ProjectBDataSet";
-            this.projectBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(354, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "STUDENTS";
-            // 
-            // studentTableAdapter
-            // 
-            this.studentTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -154,6 +131,30 @@
             this.Delete.ReadOnly = true;
             this.Delete.Text = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "Student";
+            this.studentBindingSource.DataSource = this.projectBDataSet;
+            // 
+            // projectBDataSet
+            // 
+            this.projectBDataSet.DataSetName = "ProjectBDataSet";
+            this.projectBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(354, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(153, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "STUDENTS";
+            // 
+            // studentTableAdapter
+            // 
+            this.studentTableAdapter.ClearBeforeFill = true;
             // 
             // button1
             // 

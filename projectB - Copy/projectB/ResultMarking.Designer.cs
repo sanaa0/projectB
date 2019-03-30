@@ -37,8 +37,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.assessmentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.projectBDataSet = new projectB.ProjectBDataSet();
+            this.button3 = new System.Windows.Forms.Button();
             this.assessmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.assessmentTableAdapter = new projectB.ProjectBDataSetTableAdapters.AssessmentTableAdapter();
             this.assessmentComponentBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -46,11 +47,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.assessmentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.button5 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.assessmentBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assessmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assessmentComponentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.assessmentBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -127,20 +128,25 @@
             this.comboBox3.TabIndex = 7;
             this.comboBox3.ValueMember = "Id";
             // 
+            // assessmentBindingSource1
+            // 
+            this.assessmentBindingSource1.DataMember = "Assessment";
+            this.assessmentBindingSource1.DataSource = this.projectBDataSet;
+            // 
+            // projectBDataSet
+            // 
+            this.projectBDataSet.DataSetName = "ProjectBDataSet";
+            this.projectBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(558, 330);
+            this.button3.Location = new System.Drawing.Point(246, 255);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(171, 54);
             this.button3.TabIndex = 8;
             this.button3.Text = "Upload Marks";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // projectBDataSet
-            // 
-            this.projectBDataSet.DataSetName = "ProjectBDataSet";
-            this.projectBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // assessmentBindingSource
             // 
@@ -187,16 +193,22 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // assessmentBindingSource1
+            // button5
             // 
-            this.assessmentBindingSource1.DataMember = "Assessment";
-            this.assessmentBindingSource1.DataSource = this.projectBDataSet;
+            this.button5.Location = new System.Drawing.Point(569, 370);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "Main";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // ResultMarking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label4);
@@ -212,10 +224,10 @@
             this.Name = "ResultMarking";
             this.Text = "ResultMarking";
             this.Load += new System.EventHandler(this.ResultMarking_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.assessmentBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.assessmentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.assessmentComponentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.assessmentBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +253,6 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.BindingSource assessmentBindingSource1;
+        private System.Windows.Forms.Button button5;
     }
 }

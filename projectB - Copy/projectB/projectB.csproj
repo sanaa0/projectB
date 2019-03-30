@@ -423,5 +423,29 @@
   <ItemGroup>
     <None Include="Resources\download %281%29.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\students.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sss.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

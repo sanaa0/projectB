@@ -39,9 +39,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(291, 33);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(168, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 13);
+            this.label4.Size = new System.Drawing.Size(366, 29);
             this.label4.TabIndex = 3;
             this.label4.Text = "Welcome to the Student Portal";
             // 
@@ -83,7 +84,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(562, 308);
+            this.button1.Location = new System.Drawing.Point(516, 394);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
@@ -107,6 +108,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::projectB.Properties.Resources.students;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.button1);

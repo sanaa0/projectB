@@ -29,5 +29,12 @@ namespace projectB
             MessageBox.Show("lal");
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            assesmentMain n = new assesmentMain();
+            this.Hide();
+            n.Show();
+        }
     }
 }

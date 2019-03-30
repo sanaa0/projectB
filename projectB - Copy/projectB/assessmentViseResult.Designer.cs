@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.projectBDataSet = new projectB.ProjectBDataSet();
-            this.projectBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.assessmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.assessmentTableAdapter = new projectB.ProjectBDataSetTableAdapters.AssessmentTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Viewresult = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.assessmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectBDataSet = new projectB.ProjectBDataSet();
+            this.projectBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.assessmentTableAdapter = new projectB.ProjectBDataSetTableAdapters.AssessmentTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assessmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.assessmentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -58,25 +58,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(344, 265);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // projectBDataSet
-            // 
-            this.projectBDataSet.DataSetName = "ProjectBDataSet";
-            this.projectBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // projectBDataSetBindingSource
-            // 
-            this.projectBDataSetBindingSource.DataSource = this.projectBDataSet;
-            this.projectBDataSetBindingSource.Position = 0;
-            // 
-            // assessmentBindingSource
-            // 
-            this.assessmentBindingSource.DataMember = "Assessment";
-            this.assessmentBindingSource.DataSource = this.projectBDataSet;
-            // 
-            // assessmentTableAdapter
-            // 
-            this.assessmentTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -100,12 +81,32 @@
             this.Viewresult.Text = "Viewresult";
             this.Viewresult.UseColumnTextForButtonValue = true;
             // 
+            // assessmentBindingSource
+            // 
+            this.assessmentBindingSource.DataMember = "Assessment";
+            this.assessmentBindingSource.DataSource = this.projectBDataSet;
+            // 
+            // projectBDataSet
+            // 
+            this.projectBDataSet.DataSetName = "ProjectBDataSet";
+            this.projectBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // projectBDataSetBindingSource
+            // 
+            this.projectBDataSetBindingSource.DataSource = this.projectBDataSet;
+            this.projectBDataSetBindingSource.Position = 0;
+            // 
+            // assessmentTableAdapter
+            // 
+            this.assessmentTableAdapter.ClearBeforeFill = true;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(159, 33);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(84, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 13);
+            this.label1.Size = new System.Drawing.Size(549, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Select the Assessment you want result against";
             // 
@@ -120,9 +121,9 @@
             this.Text = "AssessmentViseResult";
             this.Load += new System.EventHandler(this.assessmentViseResult_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assessmentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.assessmentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
