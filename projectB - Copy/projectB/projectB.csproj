@@ -236,6 +236,12 @@
     <Compile Include="Update student.Designer.cs">
       <DependentUpon>Update student.cs</DependentUpon>
     </Compile>
+    <Compile Include="Updateattendance date.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Updateattendance date.Designer.cs">
+      <DependentUpon>Updateattendance date.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateClo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,12 @@
     </Compile>
     <Compile Include="ViewAttendance.Designer.cs">
       <DependentUpon>ViewAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAttendancedate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAttendancedate.Designer.cs">
+      <DependentUpon>ViewAttendancedate.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewClo.cs">
       <SubType>Form</SubType>
@@ -378,6 +390,9 @@
     <EmbeddedResource Include="Update student.resx">
       <DependentUpon>Update student.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Updateattendance date.resx">
+      <DependentUpon>Updateattendance date.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateClo.resx">
       <DependentUpon>UpdateClo.cs</DependentUpon>
     </EmbeddedResource>
@@ -389,6 +404,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAttendance.resx">
       <DependentUpon>ViewAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAttendancedate.resx">
+      <DependentUpon>ViewAttendancedate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewClo.resx">
       <DependentUpon>ViewClo.cs</DependentUpon>

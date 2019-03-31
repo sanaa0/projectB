@@ -72,7 +72,7 @@ namespace projectB
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ViewAttendance n = new ViewAttendance();
+       ViewAttendancedate  n = new ViewAttendancedate();
             this.Hide();
             n.Show();
         }
@@ -86,7 +86,7 @@ namespace projectB
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AttendanceUpdate n = new AttendanceUpdate();
+            Updateattendance_date n = new Updateattendance_date();
             this.Hide();
             n.Show();
         }

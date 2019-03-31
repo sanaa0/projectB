@@ -13,9 +13,11 @@ namespace projectB
 {
     public partial class ViewAttendance : Form
     {
-        public ViewAttendance()
+        DateTime d;
+        public ViewAttendance(DateTime p)
         {
             InitializeComponent();
+            d = p.Date;
         }
 
         private void ViewAttendance_Load(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace projectB
             SqlConnection con = new SqlConnection(connection_string);
             con.Open();
 
-            String query = "SELECT FirstName,LastName,RegistrationNumber,Name as Attendance FROM [Student] JOIN StudentAttendance ON StudentAttendance.StudentId = [Student].Id  JOIN Lookup on Lookup.LookupId = StudentAttendance.AttendanceStatus";
+            String query = "SELECT FirstName,LastName,RegistrationNumber,Name as Attendance,ClassAttendance.AttendanceDate FROM [Student] JOIN StudentAttendance ON StudentAttendance.StudentId = [Student].Id  JOIN Lookup on Lookup.LookupId = StudentAttendance.AttendanceStatus join ClassAttendance on ClassAttendance.Id=StudentAttendance.AttendanceId where ClassAttendance.AttendanceDate='"+d+"'";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataAdapter VD = new SqlDataAdapter(cmd);
             DataTable table = new DataTable(cmd.ToString());
@@ -33,10 +35,6 @@ namespace projectB
             dataGridView1.DataSource = table; //showing required data in dataGrid
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -44,6 +42,8 @@ namespace projectB
             this.Hide();
             n.Show();
         }
+
+       
     }
     }
 

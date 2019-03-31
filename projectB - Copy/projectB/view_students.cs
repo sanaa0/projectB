@@ -77,6 +77,13 @@ namespace projectB
                 string connection_string = "Data Source=DESKTOP-FA5LU48;Initial Catalog=ProjectB;Integrated Security=True";
                 SqlConnection con = new SqlConnection(connection_string);
                 con.Open();
+
+                SqlCommand c1ommand = new SqlCommand(" Delete  FROM StudentResult WHERE StudentId='" + studentid + "'", con);
+                c1ommand.ExecuteNonQuery();
+
+                SqlCommand c2ommand = new SqlCommand(" Delete  FROM StudentAttendance WHERE StudentId='" + studentid + "'", con);
+                c2ommand.ExecuteNonQuery();
+
                 SqlCommand command = new SqlCommand(" Delete  FROM Student WHERE Id='" + studentid + "'", con);
                 command.ExecuteNonQuery();
                 MessageBox.Show("User deleted");

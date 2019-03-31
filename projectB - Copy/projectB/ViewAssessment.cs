@@ -123,7 +123,7 @@ namespace projectB
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ViewAssessment n = new ViewAssessment();
+         assessmentmainpage n = new assessmentmainpage();
 
             this.Hide();
             n.Show();
