@@ -55,22 +55,22 @@ namespace projectB
 
             if (cn == 6) //update
             {
-                 cloid = selectedRow.Cells[0].Value.ToString();
+                cloid = selectedRow.Cells[0].Value.ToString();
                 new_ruberic r = new new_ruberic(Convert.ToInt32(cloid));
                 this.Hide();
                 r.Show();
 
             }
-            
+
             else if (cn == 4) //add rubric
             {
 
-                 string rid = selectedRow.Cells[0].Value.ToString();
-                 int id = Convert.ToInt32(rid);
+                string rid = selectedRow.Cells[0].Value.ToString();
+                int id = Convert.ToInt32(rid);
                 UpdateClo ur = new UpdateClo(id);
-                 this.Hide();
-                 ur.Show();
-                
+                this.Hide();
+                ur.Show();
+
 
 
 
@@ -82,7 +82,8 @@ namespace projectB
 
             else if (cn == 5) //delete
             {
-               
+                try { 
+
                 string cid = selectedRow.Cells[0].Value.ToString();
 
                 string connection_string = "Data Source=DESKTOP-FA5LU48;Initial Catalog=ProjectB;Integrated Security=True";
@@ -90,7 +91,7 @@ namespace projectB
                 con.Open();
 
                 //            string query = "INSERT INTO Rubric(CloId,Details) VALUES(g,'" + textBox1.Text.ToString() + "')";
-                
+
                 SqlCommand c1 = new SqlCommand("select Id from Rubric where Cloid='" + cid + "'", con);
                 var d = c1.ExecuteReader();
 
@@ -99,8 +100,8 @@ namespace projectB
                 while (d.Read())
                 {
                     list.Add(d.GetInt32(0));
-                //    count++;
-                   
+                    //    count++;
+
                 }
                 d.Close();
                 for (int i = 0; i < list.Count; i++)
@@ -108,30 +109,33 @@ namespace projectB
                     SqlCommand c2ommand = new SqlCommand(" Delete  FROM RubricLevel WHERE RubricId=" + list[i], con);
                     c2ommand.ExecuteNonQuery();
                 }
-                
+
                 SqlCommand command = new SqlCommand(" Delete  FROM Clo WHERE Id='" + cid + "'", con);
-               
-                
+
+
                 //for(int j = 0; j < count; j++)
                 //{
-               
+
                 //}
 
-               
+
                 SqlCommand c1ommand = new SqlCommand(" Delete  FROM Rubric WHERE CloId='" + cid + "'", con);
-                    c1ommand.ExecuteNonQuery();
-                
+                c1ommand.ExecuteNonQuery();
+
 
 
 
                 command.ExecuteNonQuery();
-                
+
 
                 MessageBox.Show("Clo deleted Succesfully");
                 ViewClo v = new ViewClo();
                 this.Hide();
-                v.Show();
+                v.Show(); }
 
+                catch {
+                    MessageBox.Show("there is an assessment which uses this clo cant delete");
+                }
             }
         }
 

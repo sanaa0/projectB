@@ -17,6 +17,7 @@ namespace projectB
         /// specified buttons to load options according to prorly chosen options
         /// </summary>
         public int rid;
+        int va;
         public ResultMarking(int id)
         {
             InitializeComponent();
@@ -60,33 +61,49 @@ namespace projectB
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int va =  Convert.ToInt32(  comboBox3.Text);
             string connection_string = "Data Source=DESKTOP-FA5LU48;Initial Catalog=ProjectB;Integrated Security=True";
             SqlConnection con = new SqlConnection(connection_string);
             con.Open();
-
-            string query = "SELECT Id from AssessmentComponent where AssessmentId='"+va+"'";
+            string vva =    comboBox3.Text;
+            string query = "SELECT Id from Assessment where Title='" + vva + "'";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader d = cmd.ExecuteReader();
+            d.Read();
+             int va = Convert.ToInt32(d[0]);
+            d.Close();
             
-            List<int> t = new List<int>();
-            while(d.Read())
+
+            string q1uery = "SELECT Name from AssessmentComponent where AssessmentId='"+va+"'";
+            SqlCommand c1md = new SqlCommand(q1uery, con);
+            SqlDataReader d1 = c1md.ExecuteReader();
+            
+            List<string> t = new List<string>();
+            while(d1.Read())
             {
-                t.Add(Convert.ToInt32(d[0]));
+                t.Add((d1[0].ToString()));
             }
             comboBox1.DataSource = t;
-            d.Close();
+            d1.Close();
+
+
+
+
 
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            string va = comboBox1.Text;
             string connection_string = "Data Source=DESKTOP-FA5LU48;Initial Catalog=ProjectB;Integrated Security=True";
             SqlConnection con = new SqlConnection(connection_string);
             con.Open();
+            string q2uery = "SELECT Id from AssessmentComponent where Name='" + comboBox1.Text+ "'";
+            SqlCommand c2md = new SqlCommand(q2uery, con);
+            SqlDataReader dd = c2md.ExecuteReader();
+            dd.Read();
+            va = Convert.ToInt32(dd[0]);
+            dd.Close();
+          
 
             string query = "SELECT RubricId from AssessmentComponent where Id='" + va + "'";
             SqlCommand cmd = new SqlCommand(query, con);
@@ -136,7 +153,7 @@ namespace projectB
             int p = Convert.ToInt32(w2[0]);
 
             w2.Close();
-            string query = "INSERT INTO StudentResult(StudentId,AssessmentComponentId,RubricMeasurementId,EvaluationDate) VALUES('"+rid+"','"+comboBox1.Text+ "','" + p + "','"+DateTime.Now+"')";
+            string query = "INSERT INTO StudentResult(StudentId,AssessmentComponentId,RubricMeasurementId,EvaluationDate) VALUES('"+rid+"','"+va+ "','" + p + "','"+DateTime.Now+"')";
             SqlCommand command = new SqlCommand(query, con);
             command.ExecuteNonQuery();
 

@@ -72,23 +72,29 @@ namespace projectB
             }
             else if (cn == 5)
             {
-                string rid = selectedRow.Cells[0].Value.ToString();
+                try
+                {
+                    string rid = selectedRow.Cells[0].Value.ToString();
 
-                string connection_string = "Data Source=DESKTOP-FA5LU48;Initial Catalog=ProjectB;Integrated Security=True";
-                SqlConnection con = new SqlConnection(connection_string);
-                con.Open();
+                    string connection_string = "Data Source=DESKTOP-FA5LU48;Initial Catalog=ProjectB;Integrated Security=True";
+                    SqlConnection con = new SqlConnection(connection_string);
+                    con.Open();
 
-                //            string query = "INSERT INTO Rubric(CloId,Details) VALUES(g,'" + textBox1.Text.ToString() + "')";
+                    //            string query = "INSERT INTO Rubric(CloId,Details) VALUES(g,'" + textBox1.Text.ToString() + "')";
 
-                SqlCommand command = new SqlCommand(" Delete  FROM RubricLevel WHERE Id='" + rid + "'", con);
+                    SqlCommand command = new SqlCommand(" Delete  FROM RubricLevel WHERE Id='" + rid + "'", con);
 
-                command.ExecuteNonQuery();
+                    command.ExecuteNonQuery();
 
-                MessageBox.Show("RubricLevel deleted Succesfully");
-                viewRubricLevels n = new viewRubricLevels(cid);
-                this.Hide();
-                n.Show();
-
+                    MessageBox.Show("RubricLevel deleted Succesfully");
+                    viewRubricLevels n = new viewRubricLevels(cid);
+                    this.Hide();
+                    n.Show();
+                }
+                catch
+                {
+                    MessageBox.Show("this is used in result can not delete it");
+                }
             }
         }
 

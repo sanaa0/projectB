@@ -89,32 +89,39 @@ namespace projectB
             }
             else if (cn==3)
             {
-                /// <summary>
-                /// delets in hierarchy
-                /// </summary>
-                string rid = selectedRow.Cells[0].Value.ToString();
+                try
+                {
+                    /// <summary>
+                    /// delets in hierarchy
+                    /// </summary>
+                    string rid = selectedRow.Cells[0].Value.ToString();
 
-                string connection_string = "Data Source=DESKTOP-FA5LU48;Initial Catalog=ProjectB;Integrated Security=True";
-                SqlConnection con = new SqlConnection(connection_string);
-                con.Open();
+                    string connection_string = "Data Source=DESKTOP-FA5LU48;Initial Catalog=ProjectB;Integrated Security=True";
+                    SqlConnection con = new SqlConnection(connection_string);
+                    con.Open();
 
-                //            string query = "INSERT INTO Rubric(CloId,Details) VALUES(g,'" + textBox1.Text.ToString() + "')";
-                SqlCommand c1ommand = new SqlCommand(" Delete  FROM RubricLevel WHERE RubricId='" + rid + "'", con);
+                    //            string query = "INSERT INTO Rubric(CloId,Details) VALUES(g,'" + textBox1.Text.ToString() + "')";
+                    SqlCommand c1ommand = new SqlCommand(" Delete  FROM RubricLevel WHERE RubricId='" + rid + "'", con);
 
-                c1ommand.ExecuteNonQuery();
+                    c1ommand.ExecuteNonQuery();
 
-                SqlCommand c2ommand = new SqlCommand(" Delete  FROM AssessmentComponent WHERE RubricId='" + rid + "'", con);
+                    SqlCommand c2ommand = new SqlCommand(" Delete  FROM AssessmentComponent WHERE RubricId='" + rid + "'", con);
 
-                c2ommand.ExecuteNonQuery();
+                    c2ommand.ExecuteNonQuery();
 
-                SqlCommand command = new SqlCommand(" Delete  FROM Rubric WHERE Id='"+rid+"'", con);
+                    SqlCommand command = new SqlCommand(" Delete  FROM Rubric WHERE Id='" + rid + "'", con);
 
-                command.ExecuteNonQuery();
+                    command.ExecuteNonQuery();
 
-                MessageBox.Show("Rubric deleted Succesfully");
-                new_ruberic n = new new_ruberic(g);
-            this.Hide();
-            n.Show();
+                    MessageBox.Show("Rubric deleted Succesfully");
+                    new_ruberic n = new new_ruberic(g);
+                    this.Hide();
+                    n.Show();
+                }
+                catch
+                {
+                    MessageBox.Show("this data is used in some assessment you cant delete it");
+                }
 
             }
             else if (cn == 4)

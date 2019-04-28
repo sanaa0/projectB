@@ -108,7 +108,7 @@
             this.Controls.Add(this.label1);
             this.Name = "NewRubricLevel";
             this.Text = "NewRubricLevel";
-            this.Load += new System.EventHandler(this.NewRubricLevel_Load);
+//            this.Load += new System.EventHandler(this.NewRubricLevel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

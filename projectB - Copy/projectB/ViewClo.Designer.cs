@@ -31,6 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cloBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectBDataSet = new projectB.ProjectBDataSet();
+            this.projectBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cloTableAdapter = new projectB.ProjectBDataSetTableAdapters.CloTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewLinkColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateCreatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,12 +44,6 @@
             this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.AddRubric = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.cloBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.projectBDataSet = new projectB.ProjectBDataSet();
-            this.projectBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cloTableAdapter = new projectB.ProjectBDataSetTableAdapters.CloTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).BeginInit();
@@ -78,6 +78,45 @@
             this.dataGridView1.Size = new System.Drawing.Size(747, 258);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // cloBindingSource
+            // 
+            this.cloBindingSource.DataMember = "Clo";
+            this.cloBindingSource.DataSource = this.projectBDataSet;
+            // 
+            // projectBDataSet
+            // 
+            this.projectBDataSet.DataSetName = "ProjectBDataSet";
+            this.projectBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // projectBDataSetBindingSource
+            // 
+            this.projectBDataSetBindingSource.DataSource = this.projectBDataSet;
+            this.projectBDataSetBindingSource.Position = 0;
+            // 
+            // cloTableAdapter
+            // 
+            this.cloTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(533, 396);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Main Menu";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(417, 395);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Back";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -127,53 +166,14 @@
             // AddRubric
             // 
             this.AddRubric.DataPropertyName = "addRubric";
-            this.AddRubric.HeaderText = "AddRubric";
+            this.AddRubric.HeaderText = "OpenRubric";
             this.AddRubric.Name = "AddRubric";
             this.AddRubric.ReadOnly = true;
             this.AddRubric.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.AddRubric.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.AddRubric.Text = "AddRubric";
+            this.AddRubric.Text = "OpenRubric";
             this.AddRubric.ToolTipText = "AddRubric";
             this.AddRubric.UseColumnTextForButtonValue = true;
-            // 
-            // cloBindingSource
-            // 
-            this.cloBindingSource.DataMember = "Clo";
-            this.cloBindingSource.DataSource = this.projectBDataSet;
-            // 
-            // projectBDataSet
-            // 
-            this.projectBDataSet.DataSetName = "ProjectBDataSet";
-            this.projectBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // projectBDataSetBindingSource
-            // 
-            this.projectBDataSetBindingSource.DataSource = this.projectBDataSet;
-            this.projectBDataSetBindingSource.Position = 0;
-            // 
-            // cloTableAdapter
-            // 
-            this.cloTableAdapter.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(533, 396);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Main Menu";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(417, 395);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ViewClo
             // 
@@ -204,6 +204,8 @@
         private ProjectBDataSet projectBDataSet;
         private System.Windows.Forms.BindingSource cloBindingSource;
         private ProjectBDataSetTableAdapters.CloTableAdapter cloTableAdapter;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewLinkColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateCreatedDataGridViewTextBoxColumn;
@@ -211,7 +213,5 @@
         private System.Windows.Forms.DataGridViewButtonColumn Update;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.DataGridViewButtonColumn AddRubric;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }

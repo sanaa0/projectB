@@ -69,6 +69,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "Updateattendance_date";
             this.Text = "Updateattendance_date";
+          //  this.Load += new System.EventHandler(this.Updateattendance_date_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -120,13 +120,13 @@
             // comboBox3
             // 
             this.comboBox3.DataSource = this.assessmentBindingSource1;
-            this.comboBox3.DisplayMember = "Id";
+            this.comboBox3.DisplayMember = "Title";
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(246, 52);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 7;
-            this.comboBox3.ValueMember = "Id";
+            this.comboBox3.ValueMember = "Title";
             // 
             // assessmentBindingSource1
             // 

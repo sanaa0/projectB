@@ -31,26 +31,29 @@ namespace projectB
 
         private void AttendanceUpdate_Load(object sender, EventArgs e)
         {
-          
-             
 
-            
-                
+
+
+
+
 
 
 
             string connection_string = "Data Source=DESKTOP-FA5LU48;Initial Catalog=ProjectB;Integrated Security=True";
             SqlConnection con = new SqlConnection(connection_string);
             con.Open();
+           
+                string q11uery = "SELECT Id from ClassAttendance where AttendanceDate='" + dated + "' ";
+                SqlCommand c11ommand = new SqlCommand(q11uery, con);
+                int aa;
+                SqlDataReader dr1 = c11ommand.ExecuteReader();
+                dr1.Read();
+                aa = Convert.ToInt32(dr1[0]);
+                dr1.Close();
 
-            string q11uery = "SELECT Id from ClassAttendance where AttendanceDate='" + dated + "' ";
-            SqlCommand c11ommand = new SqlCommand(q11uery, con);
-            int aa;
-            SqlDataReader dr1 = c11ommand.ExecuteReader();
-            dr1.Read();
-            aa = Convert.ToInt32(dr1[0]);
-            dr1.Close();
 
+
+            
 
 
 
@@ -61,7 +64,7 @@ namespace projectB
 
             VD.Fill(table);
             dataGridView1.DataSource = table; //showing required data in dataGrid
-           
+
             col1.HeaderText = "Attendance";
             col1.Items.Add("Present");
             col1.Items.Add("Absent");
@@ -78,6 +81,10 @@ namespace projectB
                 r++;
             }
             d3.Close();
+
+        
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -108,7 +115,8 @@ namespace projectB
 
             for (int i = 0; i < dataGridView1.Rows.Count - 1;)
             {
-                if (dataGridView1.Rows[i].Cells[5].Value.ToString() != "")
+
+                if (dataGridView1.Rows[i].Cells[5].Value != null)
                 {
                     // int b = Convert.ToInt32(dataGridView1.Rows[i].Cells[3].Value);
                     string texte = dataGridView1.Rows[i].Cells[3].Value.ToString();
